@@ -30,36 +30,19 @@ for (let i=1; i<=7; i++)
 console.log("-------------");
 
 
-// write a for loop that iterates from 1 to 20. The loop should:
+// Part 1: Fizz Buzz
 
-// Print “prime” for all prime numbers.
-// Print “even” for all even numbers.
-// Print “odd” for all odd numbers.
-// Treat 2 as an even number and 1 & 3 as odd, rather than prime.
+// Loop through all numbers from 1 to 100.
+// If a number is divisible by 3, log “Fizz.”
+// If a number is divisible by 5, log “Buzz.”
+// If a number is divisible by both 3 and 5, log “Fizz Buzz.”
+// If a number is not divisible by either 3 or 5, log the number.
 
-for (let i=1; i<=20; i++) {
-    if (i%2===0)
-        console.log(`Number ${i} is Even`);
-    else console.log(`Number ${i} is Odd`);
-        
-    if (i>=4) {                     
-        let isPrime = true;
-        for (let j = 2; j <= i; j++) {
-                if (i % j == 0) {
-                    isPrime = false;
-                    console.log(i+' not prime');
-                    break;                                        
-                }
-                else isPrime = true;                
-        }
-        if (isPrime) 
-        console.log(`Number ${i} is Prime`); 
-    }            
-}
-
-// Loop through a string to print every character individually:
-const str = "Hello World";
-
-for (let i = 0; i < str.length; i++) {
-	console.log(str[i]);
-}
+for (let i=1; i<=100; i++) {
+    if (i%3==0){
+        if (i%5 ==0)
+            console.log("Fizz Buzz");
+        else console.log("Fizz");    
+    } else if (i%5 == 0) {
+               console.log("Buzz");
+            } else console.log(i);
