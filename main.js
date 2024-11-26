@@ -46,3 +46,30 @@ for (let i=1; i<=100; i++) {
     } else if (i%5 == 0) {
                console.log("Buzz");
             } else console.log(i);
+}
+
+//Part 2:
+
+let n=24;
+let flag=true;
+while (n<50) { 
+    
+    console.log("Number" +n);
+    for (i = 2; i <= n - 1; i++) {
+        if (n % i == 0) {
+            console.log("divide" +i);
+            console.log("Not Prime");
+            flag=false;
+            break;
+
+            
+        } else flag=true;
+    }
+    if (flag==true) {
+        console.log("Prime " +n);
+        break;
+
+    } else  n++;
+    
+}
+console.log("It's been found");
